@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Element test</title>
+  </head>
+  <body>
+    <div id="div1">
+      El texto superior no estaba en un principio, se ha creado dinámicamente.
+    </div>
+  </body>
+</html>
+<script>
+  document.body.onload = addElement;
+
+  function addElement() {
+    // crea un nuevo div
+    // y añade contenido
+    var newDiv = document.createElement("div");
+    var newContent = document.createTextNode(
+      "Eah, el mago lo ha hecho de nuevo"
+    );
+    newDiv.appendChild(newContent); //añade texto al div creado.
+
+    // añade el elemento creado y su contenido al DOM
+    var currentDiv = document.getElementById("div1");
+    document.body.insertBefore(newDiv, currentDiv);
+  }
+</script>
