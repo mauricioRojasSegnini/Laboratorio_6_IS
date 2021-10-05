@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Ejemplo getElementById</title>
+  </head>
+  <body>
+    <div class="text-msj">
+      <h1 id="colorText">Don't change my color</h1>
+      <p class="msj">I swear to God!</p>
+      <button onclick="changeColor('blue');">Blue</button>
+      <button onclick="changeColor('red');">Red</button>
+      <button onclick="changeColor('green');">Green</button>
+    </div>
+  </body>
+</html>
+<script>
+  function changeColor(newColor) {
+    var elem = document.getElementById("colorText");
+    elem.style.color = newColor;
+    var x = document.getElementsByClassName("msj");
+    x[0].innerHTML = "WHAT DID I JUST SAY?";
+  }
+</script>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="example">Say Hi!!</div>
+    <div class="example">Get blush</div>
+
+    <div class="example">Say goodbye!!.</div>
+
+    <p>Click the button to change the text</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementsByClassName("example");
+        x[0].innerHTML = "Hello World!";
+        x[1].style.backgroundColor = "red";
+        x[2].innerHTML = "Goodbye";
+      }
+    </script>
+  </body>
+</html>
